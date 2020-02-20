@@ -3,10 +3,10 @@
 <head>
   <title><unifi txt="WelcomePage.Title" /></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="/reset-min.css" />
-  <link rel="stylesheet" type="text/css" href="/styles.css" />
-  <link rel="stylesheet" type="text/css" href="/normalize.min.css" />
-  <link rel="stylesheet" type="text/css" href="/tingle.min.css" />
+  <link rel="stylesheet" type="text/css" href="reset-min.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="tingle.min.css" />
   <style TYPE="text/css">
 			body {
 			  margin: 0px;
@@ -21,11 +21,11 @@
 			  height: 80vh;
 			}			
   </style>
-  <script type="text/javascript" src="/js/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/guest.js"></script>
-  <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="/js/tingle.min.js"></script>
-  <script type="text/javascript" src="/js/imageMapResizer.min.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/guest.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/tingle.min.js"></script>
+  <script type="text/javascript" src="js/imageMapResizer.min.js"></script>
   <script>
 	function sbmitclick() {
 		modal.destroy();
@@ -50,7 +50,7 @@
 					<!-- submit (only for no authentication) -->
 						<input type="submit" id="connect" style="display:none;" />
 						<p id="banner" class="image">
-							<img class="WPCUWiFiBanner" name="WPCUWiFiBanner" usemap="#m_Map" height="100%" src="/images/WiFi_login_2019.jpg">
+							<img class="WPCUWiFiBanner" name="WPCUWiFiBanner" usemap="#m_Map" height="100%" src="images/WiFi_login_2019.jpg">
 							<map name="m_Map">
 								<area shape="rect" coords="152,744,695,815" style="cursor: pointer;" onclick="sbmitclick()">
 								<area shape="rect" coords="432,900,679,920" style="cursor: pointer;" onclick="showtandc()">
@@ -62,7 +62,7 @@
 							</map>
 							<script>$('map').imageMapResize();</script>						
 							<!--[if lte IE 8]>
-								<script src= src="/resources/js/ie8.polyfil.min.js"></script>
+								<script src= src="resources/js/ie8.polyfil.min.js"></script>
 							<![endif]-->
 						</p>
 				</div>
@@ -115,7 +115,7 @@
 			modal.addFooterBtn('Accept', 'tingle-btn tingle-btn--primary', function() { modalAcceptClick(); });
 			modal.addFooterBtn('Close', 'tingle-btn tingle-btn', function() { modal.close(); });
 			modal.addFooterBtn('Download Terms & Conditions', 'tingle-btn tingle-btn--danger', function() { 
-				download_file("//MC_WiFi_TandC-Final.pdf","MC_WiFi_TandC-Final.pdf");
+				download_file("/MC_WiFi_TandC-Final.pdf","MC_WiFi_TandC-Final.pdf");
 				modal.close();
 			});
 		</script>

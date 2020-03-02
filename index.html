@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
 <head>
-  <title>WPCU Wi-Fi</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>WPCU Wi-Fi</title>  
   <link rel="stylesheet" type="text/css" href="./reset-min.css" />
   <link rel="stylesheet" type="text/css" href="./styles.css" />
   <link rel="stylesheet" type="text/css" href="./normalize.min.css" />
@@ -121,7 +121,13 @@
 		</script>
 	</div>
 </div>
-
+<hr>
+    <h4>Debugging Stats</h4>
+    <p><label>Base Grant URL: </label><label id="baseGrantURL"></label></p>
+    <p><label>User Continue URL: </label><label id="userContinueURL"></label></p>
+    <p><label>Client IP: </label><label id="clientIP"></label></p>
+    <p><label>Client MAC: </label><label id="clientMAC"></label></p>
+    <p><label>Access Point MAC: </label><label id="nodeMAC"></label></p>
 <script type="text/javascript">
 jQuery(document).ready(function() {
 	jQuery('input').keypress(function(e) {
@@ -147,7 +153,7 @@ $(function() {
 		}
 	})
 });
-</script>
+</script>	
 <script src="./js/meraki.js"></script>
 </body>
 </html>

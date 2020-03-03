@@ -40,6 +40,13 @@ function authUser(){
 
 // Button handler function to store the form data and login. 
 function login(){
+    // send the data somewhere like a database
+    var data = {};
+    data.name = document.getElementById("name").value;
+    data.email = document.getElementById("email").value;
+    alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
+    console.log("Storing data to db...", data);
+
     // Complete Login
     authUser();
 }

@@ -46,12 +46,7 @@ LICENSE: MIT
         <script type="text/javascript" src="./js/tingle.min.js"></script>
         <script type="text/javascript" src="./js/imageMapResizer.min.js"></script>
         <script>
-            var base_grant_url = decodeURIComponent(GetURLParameter("base_grant_url"));
-            var user_continue_url = decodeURIComponent(GetURLParameter("user_continue_url"));
-            var node_mac = GetURLParameter("node_mac");
-            var client_ip = GetURLParameter("client_ip");
-            var client_mac = GetURLParameter("client_mac");
-	        function sbmitclick() {
+		function sbmitclick() {
 		        modal.destroy();
 		        document.getElementById('connect').click();
 	        }
@@ -63,33 +58,7 @@ LICENSE: MIT
 	        function showtandc() {
 		        modal.open();
 	        }
-            document.getElementById('connect').onsubmit= function(e) {
-                login();
-            }
-            function authUser(){
-                var loginUrl = base_grant_url;
-                if(user_continue_url !== "undefined") {
-                    loginUrl += "?continue_url="+user_continue_url;
-                }
-                console.log("Logging in... ",loginUrl);
-                window.location.href = loginUrl;
-            }
-            function login(){
-                authUser();
-            }
-            function GetURLParameter(sParam)
-            {
-                var sPageURL = window.location.search.substring(1);
-                var sURLVariables = sPageURL.split('&');
-                for (var i = 0; i < sURLVariables.length; i++)
-                {
-                    var sParameterName = sURLVariables[i].split('=');
-                    if (sParameterName[0] == sParam)
-                    {
-                        return sParameterName[1];
-                    }
-                }
-            }
+            
         </script>
     </head>
     <div class="container">
@@ -100,23 +69,23 @@ LICENSE: MIT
                 <p id="banner" class="image">
                     <img class="WPCUWiFiBanner" name="WPCUWiFiBanner" usemap="#m_Map" height="100%" src="./images/WiFi_login_2019.jpg">
                     <map name="m_Map">
-						<area shape="rect" coords="152,744,695,815" style="cursor: pointer;" onclick="sbmitclick()">
-						<area shape="rect" coords="432,900,679,920" style="cursor: pointer;" onclick="showtandc()">
-						<area shape="rect" coords="62,1345,178,1360" href="https://www.wpcu.coop/en-us" title="Wright-Patt Credit Union" >
-						<area shape="rect" coords="521,1430,565,1474" href="https://www.facebook.com/WrightPattCreditUnion" title="Facebook" >
-						<area shape="rect" coords="584,1430,628,1474" href="https://twitter.com/wpcu" title="Twitter" >
-						<area shape="rect" coords="648,1430,692,1474" href="https://www.instagram.com/WrightPattCreditUnion" title="Instagram" >
-						<area shape="rect" coords="711,1430,755,1474" href="https://www.youtube.com/user/wpcu" title="YouTube" >
-					</map>
-                    <script>$('map').imageMapResize();</script>						
-					<!--[if lte IE 8]>
-						<script src= src="./js/ie8.polyfil.min.js"></script>
-					<![endif]-->
-                </p>
-            </div>
-        </form>
-    </div>
-    <script>
+			    <area shape="rect" coords="152,744,695,815" style="cursor: pointer;" onclick="sbmitclick()">
+			    <area shape="rect" coords="432,900,679,920" style="cursor: pointer;" onclick="showtandc()">
+			    <area shape="rect" coords="62,1345,178,1360" href="https://www.wpcu.coop/en-us" title="Wright-Patt Credit Union" >
+			    <area shape="rect" coords="521,1430,565,1474" href="https://www.facebook.com/WrightPattCreditUnion" title="Facebook" >
+			    <area shape="rect" coords="584,1430,628,1474" href="https://twitter.com/wpcu" title="Twitter" >
+			    <area shape="rect" coords="648,1430,692,1474" href="https://www.instagram.com/WrightPattCreditUnion" title="Instagram" >
+			    <area shape="rect" coords="711,1430,755,1474" href="https://www.youtube.com/user/wpcu" title="YouTube" >
+			</map>
+			<script>$('map').imageMapResize();</script>
+			<!--[if lte IE 8]>
+				<script src= src="./js/ie8.polyfil.min.js"></script>
+			<![endif]-->
+		    </p>
+		</div>
+	    </form>
+	</div>
+	<script>
         function download_file(fileURL, fileName) {
             // for non-IE
             if (!window.ActiveXObject) {
@@ -197,4 +166,5 @@ LICENSE: MIT
     <p><label>Client IP: </label><label id="clientIP"></label></p>
     <p><label>Client MAC: </label><label id="clientMAC"></label></p>
     <p><label>Access Point MAC: </label><label id="nodeMAC"></label></p>
+    <script src="./js/meraki.js"></script>
 </html>
